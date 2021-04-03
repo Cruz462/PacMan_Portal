@@ -203,6 +203,14 @@ class Ghost(Character):
     def look_up(self): self.timer.switch_timer('up')
     def look_down(self): self.timer.switch_timer('down')
     def look_next(self):
+        # if self.grid_pt_next.pt.x > self.grid_pt.pt.x:
+        #     lookr = 'right'
+        # elif self.grid_pt_next.pt.x < self.grid_pt.pt.x:
+        #     lookl = 'left'
+        # elif self.grid_pt_next.pt.y > self.grid_pt.pt.y:
+        #     lookd = 'down'
+        # elif self.grid_pt_next.pt.y < self.grid_pt.pt.y:
+        #     looku = 'up'
         next = {'left': 'up', 'up': 'right', 'right': 'down', 'down': 'left'}
         thekey = self.timer.getkey()
         nextkey = next[thekey]
